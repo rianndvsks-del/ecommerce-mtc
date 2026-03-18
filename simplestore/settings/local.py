@@ -9,14 +9,16 @@ MIDDLEWARE_CLASSES += (
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
+# No arquivo simplestore/settings/local.py
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_simple_ecommerce',
-        'HOST': '127.0.0.1',
-        'USER': '',
-        'PASSWORD': '',
-        'PORT': '5432'
+        'NAME': 'simplestore',      # Deve ser igual ao POSTGRES_DB do docker-compose
+        'USER': 'postgres',         # Deve ser igual ao POSTGRES_USER do docker-compose
+        'PASSWORD': 'postgres',     # Deve ser igual ao POSTGRES_PASSWORD do docker-compose
+        'HOST': 'db',               # Nome do serviço no docker-compose
+        'PORT': '5432',
     }
 }
 
