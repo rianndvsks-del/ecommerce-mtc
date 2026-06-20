@@ -91,7 +91,6 @@ DEBUG = True
 # https://docs.djangoproject.com/en/1.10.5/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
